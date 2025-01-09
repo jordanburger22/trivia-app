@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { QuizContext } from "../context/QuizContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -37,7 +37,7 @@ function Results() {
         <div className="results-container">
             {savedAnswers.length === 0 &&
                 <div>
-                    <p>Go to the <button>Trivia Quiz</button> and answer all the questions to get a score.</p>
+                    <p>Go to the <Link to='/quiz'><button>Trivia Quiz</button></Link> and answer all the questions to get a score.</p>
                 </div>
             }
             {
